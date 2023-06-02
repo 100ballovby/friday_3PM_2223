@@ -20,6 +20,9 @@ def get_daily_forecast(city):
 
 minsk = get_daily_forecast('Minsk')
 for entry in minsk['list']:
-    print(entry['main']['temp'])
-    print(entry['weather'][0]['description'])
+    print(f"Дата: {entry['dt_txt']}")
+    print(f"Температура: {entry['main']['temp']}, ощущается как: {entry['main']['feels_like']}")
+    print(f"Погода: {entry['weather'][0]['description']}")
+    print(f"Скорость ветра: {entry['wind']['speed']}\n\n")
+
 
